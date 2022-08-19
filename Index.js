@@ -13,7 +13,7 @@ function Index() {
 
   return (
     <View>
-        <Text>Hola</Text>
+        <Text>Hello</Text>
     </View>
   )
 }

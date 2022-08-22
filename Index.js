@@ -68,6 +68,7 @@ function Index() {
             <Text style={{color: 'white'}}>Connect Here</Text>
           </View>
         </TouchableHighlight>
+        <Text>Hello</Text>
     </View>
   )
 }

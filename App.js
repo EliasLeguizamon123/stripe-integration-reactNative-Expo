@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
-import { StyleSheet, Text, View, PermissionsAndroid } from 'react-native';
-import { StripeTerminalProvider } from '@stripe/stripe-terminal-react-native';
+import { StyleSheet, Text, View, PermissionsAndroid, Alert } from 'react-native';
+import { StripeTerminalProvider, useStripeTerminal } from '@stripe/stripe-terminal-react-native';
 import Index from './Index';
 
 export default function App() {
+
   useEffect(() => {
     async function init() {
       try {
@@ -29,12 +30,13 @@ export default function App() {
   }, []);
 
   const fetchTokenProvider = async () => {
-    const response = await fetch(`{YOUR BACKEND URL}/connection_token`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const stripeBaseUrl = 'your url'
+    const stripeApiKey = 'your api key'
+    const headers = new Headers();
+        headers.append('Authorization', `Bearer ${stripeApiKey}`);
+        const requestOptions = { method: 'POST', headers };
+        const response = await fetch(`${stripeBaseUrl}/terminal/connection_tokens`, requestOptions);
+
     const { secret } = await response.json();
     return secret;
   };

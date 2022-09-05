@@ -26,10 +26,16 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.stripe.test"
+      "package": "com.stripe.test",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "71f7bea0-4fdb-45e4-850d-73a482eafa68"
+      }
     }
   }
 }

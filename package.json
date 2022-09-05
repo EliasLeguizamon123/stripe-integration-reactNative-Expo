@@ -11,15 +11,24 @@
     "@expo/webpack-config": "^0.17.0",
     "@stripe/stripe-terminal-react-native": "^0.0.1-beta.7",
     "expo": "~46.0.8",
+    "expo-splash-screen": "~0.16.1",
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-native": "0.69.4",
     "react-native-web": "~0.18.7",
-    "expo-splash-screen": "~0.16.1"
+    "expo-updates": "~0.14.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.1"
   },
   "private": true
 }
